@@ -1,4 +1,4 @@
-from blog.views import PostDetail, List, TagList, NoteDetail, PostList
+from blog.views import PostDetail, List, TagList, NoteDetail, PostList, NoteList
 from django.urls import path
 
 urlpatterns = [
@@ -6,5 +6,6 @@ urlpatterns = [
     path('blog/', PostList.as_view(), name='post_list'),
     path('blog/<slug:slug>/', PostDetail.as_view(), name='post_detail'),
     path('tag/<slug:slug>/', TagList.as_view(), name='tagged'),
+    path('note/', NoteList.as_view(), name='note_list'),
     path('note/<slug:slug>/', NoteDetail.as_view(), name='note_detail'),
 ]
