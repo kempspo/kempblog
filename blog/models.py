@@ -39,3 +39,30 @@ class Post(models.Model):
 
     class Meta():
         ordering = ['-created_on']
+
+class Note(models.Model):
+    title = models.CharField(max_length=250, unique=True)
+    slug = models.SlugField(max_length=200, unique=True)
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    text = MarkdownxField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    updated_on = models.DateTimeField(auto_now=True)
+    status = models.IntegerField(choices=STATUS, default=0)
+
+    # Create a property that returns the markdown instead
+    @property
+    def formatted_markdown(self):
+        return markdownify(self.text)
+
+    def __str__(self):
+        return self.title
+
+    def get_absolute_url(self):
+        kwargs = {
+            # 'created_on': self.created_on, 
+            'slug': self.slug,
+        }
+        return reverse('post_detail', kwargs=kwargs)
+
+    class Meta():
+        ordering = ['-created_on']
