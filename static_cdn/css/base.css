@@ -1,0 +1,126 @@
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    background-color: #2b343e; /*212529*/
+    padding-top: 70px;
+}
+
+shadow {
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);
+}
+
+btn-danger {
+    color: #fff;
+    background-color: #f00000;
+    border-color: #dc281e;
+}
+
+masthead {
+    background: #2b343e;
+    height: auto;
+    padding-bottom: 15px;
+    padding-top: 10px;
+    margin-top: 60px;
+}
+
+.responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+head_text {
+    color: #2b343e;
+}
+
+a {
+    text-decoration: none;
+    color: #2b343e;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #2b343e;
+}
+
+.card {
+    text-decoration: none;
+}
+
+.card h2 {
+    text-decoration: none;
+    display: block;
+    color: #2b343e;
+}
+
+.card p {
+    text-decoration: none;
+    display: block;
+    color: #2b343e;
+}
+
+container {
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.button {
+    border: none;
+    background: #1D1D20;
+    color: #ffffff !important;
+    font-weight: 80;
+    font-size: 80%;
+    align-content: center;
+    letter-spacing: 2px;
+    padding: 20px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    display: inline-block;
+    transition: all 0.3s ease 0s;
+}
+
+.button:hover {
+    color: #1D1D20 !important;
+    font-weight: 700 !important;
+    letter-spacing: 2px;
+    font-size: 80%;
+    align-content: center;
+    background: none;
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.3s ease 0s;
+}
+
+.small-btn {
+    width: 10%;
+    height: 5%;
+}
+
+.medium-btn {
+    width: 15%;
+    height: 5%;
+}
+
+.big-btn {
+    width: 25%;
+    height: 5%;
+}
+
+.thumbnail {
+    max-width: 50%;
+    height: auto;
+    float: right;
+}
+
+a p {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+#mainNav {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
