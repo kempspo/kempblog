@@ -44,23 +44,27 @@ a:hover {
 
 .card {
     text-decoration: none;
+    max-width: 100%;
 }
 
 .card h2 {
     text-decoration: none;
     display: block;
     color: #2b343e;
+    max-width: 100%;
 }
 
 .card p {
     text-decoration: none;
     display: block;
     color: #2b343e;
+    max-width: 100%;
 }
 
 container {
     margin-left:auto;
     margin-right:auto;
+    max-width: 100%;
 }
 
 .button {
