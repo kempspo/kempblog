@@ -16,12 +16,12 @@ class PostDetail(DetailView):
     model = Post
     template_name = 'post_detail.html'
 
-class PostList(DetailView):
+class PostList(ListView):
     queryset = Post.objects.filter(status=1).order_by('-created_on')
     template_name = 'post_list.html'
 
 class TagList(ListView):
-    template_name = 'index.html'
+    template_name = 'tag.html'
 
     def get_queryset(self):
         slug = self.kwargs['slug']
@@ -33,3 +33,7 @@ class TagList(ListView):
 class NoteDetail(DetailView):
     model = Note
     template_name = 'note_detail.html'
+
+class NoteList(ListView):
+    queryset = Note.objects.filter(status=1).order_by('-created_on')
+    template_name = 'note_list.html'
