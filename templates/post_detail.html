@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
+{% load social_share %}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
     $(document).ready(function(){
@@ -18,8 +19,12 @@
                     <p class=" text-muted">{{ post.author }} | {{ post.created_on | date:"d M Y" }}</p>
                     <img class="responsive" src="{{ post.background_image.url }}">
                     <div id="container" class="container"> <p>{{ post.formatted_markdown|safe }}</p> </div>
+                    {% post_to_linkedin post.title %}
+                    {% post_to_twitter post.title %}
+                    {% post_to_facebook %}
                     <div id="show" class="button_cont"> 
                         <a class="button big-btn">
+                            <i class="fas fa-comments"></i>
                             Share your thoughts 
                         </a>
                     </div>
