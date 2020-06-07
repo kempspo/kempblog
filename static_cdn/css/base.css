@@ -44,27 +44,24 @@ a:hover {
 
 .card {
     text-decoration: none;
-    max-width: 100%;
+    /* background-color: #2b343e; */
 }
 
 .card h2 {
     text-decoration: none;
     display: block;
     color: #2b343e;
-    max-width: 100%;
 }
 
 .card p {
     text-decoration: none;
     display: block;
     color: #2b343e;
-    max-width: 100%;
 }
 
 container {
-    margin-left:auto;
-    margin-right:auto;
-    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .button {
@@ -122,9 +119,19 @@ a p {
 
 #mainNav {
     overflow: hidden;
-    background-color: #333;
+    background-color: #16171d;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 9999;
+}
+
+#linkedin{
+    max-width: 3.5%;
+    vertical-align: top;
+}
+
+#github{
+    max-width: 3%;
+    vertical-align: top;
 }
