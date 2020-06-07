@@ -60,6 +60,7 @@ a:hover {
 }
 
 container {
+    max-width: auto;
     margin-left: auto;
     margin-right: auto;
 }
@@ -102,8 +103,9 @@ container {
 }
 
 .big-btn {
-    width: 25%;
+    width: 26%;
     height: 5%;
+    text-align: center;
 }
 
 .thumbnail {
@@ -134,4 +136,9 @@ a p {
 #github{
     max-width: 3%;
     vertical-align: top;
+}
+
+.social {
+    float: right;
+    padding-left: 5px;
 }
