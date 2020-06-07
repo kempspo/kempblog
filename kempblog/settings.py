@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'emoji',
     'markdownx',
     'taggit',
+    'django_social_share',
 ]
 
 AUTHENTICATION_BACKENDS = (
