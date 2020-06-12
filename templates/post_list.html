@@ -8,8 +8,8 @@
         <div class="row">
             <div class=" col-md-8 col-md-10 mx-auto">
                 <div class="site-heading">
-                    <h2 class="text-white mt-3">✒️ Blog Posts</h2>
-                    <p class="text-light">Posts about tech and data </p>
+                    <h2>✒️ Blog Posts</h2>
+                    <p>Posts about tech and data </p>
                 </div>
             </div>
         </div>
@@ -17,7 +17,6 @@
 </header>
 <div class="container">
     <div class="row">
-        <!-- Blog Entries Column -->
         <div class="mt-3">
             {% for post in post_list %}
             <a href="{% url 'post_detail' slug=post.slug %}">
@@ -25,7 +24,7 @@
                     <div class="card-body">
                         <h2 class="card-title">{{ post.title }}</h2>
                         <p class="card-text">{{ post.created_on | date:"d M Y" }} </p>
-                        <img src="{{ post.background_image.url }}" class="thumbnail">
+                        <img src="{{ post.background_image.url }}" class="thumbnail"> </img>
                         <p class="card-text">{{ post.formatted_markdown|safe|slice:":200" }}</p>
                         <div style="display:flex mb-4">
                             {% for tag in post.tag.all %}
