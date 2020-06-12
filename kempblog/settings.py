@@ -87,6 +87,7 @@ MARKDOWNX_MARKDOWN_EXTENSIONS = [
     'markdown.extensions.nl2br',
     'markdown.extensions.extra',
     'markdown.extensions.codehilite',
+    'markdown.extensions.fenced_code'
 ]
 
 WSGI_APPLICATION = 'kempblog.wsgi.application'
