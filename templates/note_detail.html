@@ -16,13 +16,14 @@
             <div class="card mb-4">
                 <div class="card-body">
                     <h2 class="card-title">{{ note.title }}</h2>
-                    <p class=" text-muted">{{ note.author }} | {{ note.created_on | date:"d M Y" }}</p>
+                    <p class="text-muted">{{ note.author }} | {{ note.created_on | date:"d M Y" }}</p>
                     <div id="container" class="container"> <p>{{ note.formatted_markdown|safe }}</p> </div>
                     {% post_to_linkedin post.title %}
                     {% post_to_twitter post.title %}
                     {% post_to_facebook %}
                     <div id="show" class="button_cont"> 
                         <a class="button big-btn">
+                            <i class="fas fa-comments"></i>
                             Share your thoughts 
                         </a>
                     </div>

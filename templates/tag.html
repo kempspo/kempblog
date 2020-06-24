@@ -29,7 +29,7 @@
                         <p class="card-text">{{ post.formatted_markdown|safe|slice:":200" }}</p>
                         <div style="display:flex mb-4">
                             {% for tag in post.tag.all %}
-                            <a href="{% url 'tagged' tag.slug %}" class="mr-1 badge badge-info">#{{ tag }}</a>
+                            <a href="{% url 'tagged' tag.slug %}" class="mr-1 badge badge-light">#{{ tag }}</a>
                             {% endfor %}
                         </div>
                     </div>

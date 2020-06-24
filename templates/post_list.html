@@ -25,10 +25,10 @@
                         <h2 class="card-title">{{ post.title }}</h2>
                         <p class="card-text">{{ post.created_on | date:"d M Y" }} </p>
                         <img src="{{ post.background_image.url }}" class="thumbnail"> </img>
-                        <p class="card-text">{{ post.formatted_markdown|safe|slice:":200" }}</p>
+                        <p class="card-text">{{ post.intro|safe|slice:":250" }}</p>
                         <div style="display:flex mb-4">
                             {% for tag in post.tag.all %}
-                            <a href="{% url 'tagged' tag.slug %}" class="mr-1 badge badge-info">#{{ tag }}</a>
+                            <a href="{% url 'tagged' tag.slug %}" class="mr-1 badge badge-light">#{{ tag }}</a>
                             {% endfor %}
                         </div>
                     </div>
