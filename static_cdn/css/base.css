@@ -1,13 +1,14 @@
 body {
-    background-color: #2b343e; /*212529*/
+    background-color: #2e363f; /*212529*/
     color: #ffffff;
-    font-family: "Roboto", sans-serif;
+    font-family: "Montserrat", "Roboto", sans-serif;
     font-size: 20px;
     padding-top: 30px;
 }
 
 .site-heading h1, h2 {
-    color: #c3b6a2;
+    color: #ecddc3;
+    font-weight: bold;
     margin-top: 1px;
 }
 
@@ -31,6 +32,15 @@ body {
     margin-right: auto;
 }
 
+.img {
+    align-items: center;
+    display: flex;
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 a {
     color: #c3b6a2;
     text-decoration: none;
@@ -43,19 +53,29 @@ a:hover {
 
 .card {
     background-color: inherit;
-    border: solid 2px;
-    border-radius: 20px;
+    border: none;
     color: #c3b6a2;
     text-decoration: none;
+    margin-bottom: 10px;
+    padding-top: 0px;
+    padding-bottom: 20px;
 }
 
-.card .text-muted{
+.card .card-title {
+    text-align: center;
+}
+
+.card .card-text {
+    text-align: center;
+}
+
+.card .text-muted {
     font-size: 18px;
 }
 
 .container {
     color: #c3b6a2;
-    max-width: 80%;
+    max-width: 70%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0;
@@ -83,7 +103,7 @@ a:hover {
     color: #1D1D20 !important;
     font-weight: 700 !important;
     letter-spacing: 2px;
-    font-size: 75%;
+    font-size: 73%;
     transition: all 0.3s ease 0s;
     -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
     -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
@@ -100,15 +120,24 @@ a:hover {
 }
 
 .big-btn {
-    width: 26%;
+    width: 30%;
     height: 5%;
     text-align: center;
 }
 
 .thumbnail {
-    max-width: 50%;
+    max-width: 20%;
     height: auto;
     float: right;
+}
+
+.nav-link {
+    color:#2e363f;
+    font-weight: bold;
+}
+
+.navbar {
+    background-color: #c3b6a2;
 }
 
 #mainNav {
@@ -130,6 +159,12 @@ a:hover {
     text-align: center;
 }
 
-.navbar {
-    background: #c3b6a2;
+.badge-light {
+    color:#2e363f;
+    background-color:#c3b6a2;
+}
+
+.see {
+    text-decoration: underline;
+    font-weight: bold;
 }
