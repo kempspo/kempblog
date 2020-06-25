@@ -7,9 +7,10 @@ from taggit.managers import TaggableManager
 from datetime import datetime
 
 STATUS = (
-    (0,"Draft"),
-    (1,"Publish")
+    (0, "Draft"),
+    (1, "Publish")
 )
+
 
 class Post(models.Model):
     title = models.CharField(max_length=250, unique=True)
@@ -33,13 +34,14 @@ class Post(models.Model):
 
     def get_absolute_url(self):
         kwargs = {
-            # 'created_on': self.created_on, 
+            # 'created_on': self.created_on,
             'slug': self.slug,
         }
         return reverse('post_detail', kwargs=kwargs)
 
     class Meta():
         ordering = ['-created_on']
+
 
 class Note(models.Model):
     title = models.CharField(max_length=250, unique=True)
@@ -60,7 +62,7 @@ class Note(models.Model):
 
     def get_absolute_url(self):
         kwargs = {
-            # 'created_on': self.created_on, 
+            # 'created_on': self.created_on,
             'slug': self.slug,
         }
         return reverse('post_detail', kwargs=kwargs)

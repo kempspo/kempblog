@@ -15,18 +15,18 @@ from datetime import datetime
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-TEMPLATES_DIR = os.path.join(BASE_DIR,'templates')
+TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'b^ryywuq^qxw*4e+i9r_^adz!z)p7e)fn%mv3%+^3le1=eo^t8'
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = int(os.environ.get("DEBUG", default=0))
 
-# ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
 
 # Application definition
 
@@ -98,23 +98,15 @@ WSGI_APPLICATION = 'kempblog.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    "default": {
+        "ENGINE": os.environ.get("SQL_ENGINE", "django.db.backends.sqlite3"),
+        "NAME": os.environ.get("SQL_DATABASE", os.path.join(BASE_DIR, "db.sqlite3")),
+        "USER": os.environ.get("SQL_USER", "user"),
+        "PASSWORD": os.environ.get("SQL_PASSWORD", "password"),
+        "HOST": os.environ.get("SQL_HOST", "localhost"),
+        "PORT": os.environ.get("SQL_PORT", "5432"),
     }
 }
-
-# pip install django psycopg2
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'myproject',
-#         'USER': 'myprojectuser',
-#         'PASSWORD': 'password',
-#         'HOST': 'localhost',
-#         'PORT': '',
-#     }
-# }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -159,6 +151,6 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
 
-STATIC_ROOT =  os.path.join(BASE_DIR,'static_cdn')
+STATIC_ROOT = os.path.join(BASE_DIR, "static_cdn")
 MEDIA_ROOT = os.path.join(BASE_DIR, "media_cdn")
 MARKDOWNX_MEDIA_PATH = datetime.now().strftime('markdownx/%Y/%m/%d')
